@@ -9,7 +9,7 @@ type LandingProps = {
 
 const Landing = ({ subtitle, onJoinMe, onGoLogin }: LandingProps) => {
   return (
-    <div>
+    <div className="pb-bg-red-600">
       <nav>nav</nav>
       <span>LOGO</span>
     </div>
