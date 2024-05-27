@@ -20,6 +20,7 @@ const LandingContainer = () => {
       subtitle={landingMsgs.TITLE}
       description={landingMsgs.DESCRIPTION}
       btnLabel={landingMsgs.BUTTON_LABEL}
+      goLoginText={landingMsgs.GO_LOGIN_TEXT}
       onJoinMe={onClickStartOrContinueApplication}
       onGoLogin={onClickStartOrContinueApplication}
     />
