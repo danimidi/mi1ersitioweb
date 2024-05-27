@@ -1,18 +1,25 @@
-import { useNavigate } from "react-router-dom";
-import Landing from "./Landing";
+import { useNavigate } from 'react-router-dom';
+import Landing from './Landing';
+import messages from '../../i18n/index';
+import { useMemo } from 'react';
 
 const LandingContainer = () => {
   //   const navigate = useNavigate();
 
   const onClickStartOrContinueApplication = () => {
     // navigate(`/application/${123}`);
-    console.log("hola");
+    console.log('hola');
   };
+
+  const landingMsgs = useMemo(() => {
+    return messages.es.LANDING;
+  }, []);
 
   return (
     <Landing
-      subtitle="UNIVERSO DE MASCOTAS"
-      description="¡Se parte de esta gran comunidad y descubre toda la magia en ella!"
+      subtitle={landingMsgs.TITLE}
+      description={landingMsgs.DESCRIPTION}
+      btnLabel={landingMsgs.BUTTON_LABEL}
       onJoinMe={onClickStartOrContinueApplication}
       onGoLogin={onClickStartOrContinueApplication}
     />
