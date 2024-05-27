@@ -20,8 +20,11 @@ module.exports = {
 
       //neutrals
       'neutral-500': '#2E2E2E',
-      'neutral-200': '#7D919F',
+      'neutral-200': '#54616b',
       'neutral-100': '#757575',
+
+      // landing background
+      'beige-50': '#fff5ea',
     },
     extend: {
       fontFamily: {

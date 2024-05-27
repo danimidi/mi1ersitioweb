@@ -1,9 +1,9 @@
 import React from 'react';
 import { GlobeAltIcon } from '@heroicons/react/24/solid';
 import petbookyLogo from '../../assets/img/petbooky_logo.svg';
-import landingBg from '../../assets/img/bg-landing2.jpg';
 import './landing.css';
 import petsKawaii from '../../assets/img/pets-kawaii.svg';
+import landingBg from '../../assets/img/luna1.jpg';
 
 type LandingProps = {
   subtitle: string;
@@ -21,7 +21,7 @@ const Landing = ({
   onGoLogin,
 }: LandingProps) => {
   return (
-    <div className='pb-h-full pb-relative'>
+    <div className='pb-min-h-full pb-h-fit pb-relative '>
       <header className='pb-p-3'>
         <nav className='pb-flex pb-justify-end pb-text-sm'>
           <button className='pb-px-3 pb-py-1 pb-font-medium pb-text-neutral-500 hover:pb-bg-orange-100 hover:pb-text-orange-500'>
@@ -33,19 +33,19 @@ const Landing = ({
           </button>
         </nav>
       </header>
-      <main className='pb-px-8 pb-flex pb-flex-col pb-items-center'>
-        <img src={petbookyLogo} alt='logo' className='pb-h-auto pb-mt-16' />
-        <section className='pb-flex pb-flex-col pb-items-center pb-mt-10'>
-          <h1 className='pb-text-4xl pb-text-center pb-font-racing pb-text-neutral-200'>
+      <main className='pb-px-8 pb-pb-8 pb-flex pb-flex-col pb-items-center'>
+        <img src={petbookyLogo} alt='logo' className='pb-h-auto pb-mt-11' />
+        <section className='pb-flex pb-flex-col pb-items-center pb-mt-5'>
+          <h1 className='pb-text-3xl pb-text-center pb-font-racing pb-text-neutral-200'>
             {subtitle}
           </h1>
-          <img src={petsKawaii} alt='logo' className='pb-h-auto' />
+          <img src={petsKawaii} alt='logo' className='pb-w-72 pb-h-auto' />
           <div className='pb-px-4 pb-py-6 pb-bg-white pb-bg-opacity-50 pb-rounded-2xl'>
-            <h2 className='pb-text-center pb-text-xl pb-font-bold pb-text-orange-500'>
+            <h2 className='pb-text-center pb-text-xl pb-font-bold pb-text-brown-200'>
               {description}
             </h2>
           </div>
-          <button className='pb-w-full pb-p-4 pb-rounded-xl pb-text-2xl pb-font-semibold pb-text-white pb-bg-orange-500'>
+          <button className='pb-w-4/5 pb-p-4 pb-mt-5 pb-rounded-xl pb-text-2xl pb-font-semibold pb-text-white pb-bg-orange-500'>
             {btnLabel}
           </button>
         </section>
