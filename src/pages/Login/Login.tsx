@@ -9,8 +9,7 @@ type LoginProps = {
   forgotPassword: string;
   btnLabel: string;
   noAccount: string;
-  onJoinMe: () => void;
-  onGoLogin: () => void;
+  authenticateUser: (e?: React.MouseEvent<HTMLElement>) => void;
 };
 
 function Login({
@@ -18,8 +17,7 @@ function Login({
   forgotPassword,
   btnLabel,
   noAccount,
-  onJoinMe,
-  onGoLogin,
+  authenticateUser,
 }: LoginProps) {
   const noAccountParts = useMemo(() => {
     const sections = noAccount.split('+');
@@ -39,10 +37,7 @@ function Login({
         <h1 className='pb-text-2xl pb-font-bold pb-text-neutral-500 pb-mt-24'>
           {title}
         </h1>
-        <form
-          action=''
-          className='pb-w-full pb-space-y-8 pb-mt-14 sm:pb-max-w-[592px]'
-        >
+        <form className='pb-w-full pb-space-y-8 pb-mt-14 sm:pb-max-w-[592px]'>
           <Input placeholder={'Correo electrónico'} />
           <div>
             <Input placeholder={'Contraseña'} type='password' />
@@ -50,7 +45,12 @@ function Login({
               <a href='/password/reset/'>{forgotPassword}</a>
             </span>
           </div>
-          <Button type='submit' size='medium' className='pb-w-full'>
+          <Button
+            type='submit'
+            size='medium'
+            className='pb-w-full'
+            onClick={authenticateUser}
+          >
             {btnLabel}
           </Button>
           <span className='pb-block pb-text-center pb-text-sm pb-text-neutral-500 pb-bg-white pb-bg-opacity-80'>

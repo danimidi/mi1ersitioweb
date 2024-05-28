@@ -10,9 +10,17 @@ type ButtonProps = {
   className?: string;
 };
 
-function Button({ children, type, icon: Icon, size, className }: ButtonProps) {
+function Button({
+  children,
+  type = 'button',
+  icon: Icon,
+  size = 'medium',
+  className,
+  onClick,
+}: ButtonProps) {
   return (
     <button
+      onClick={onClick}
       type={type}
       className={cn(className, {
         'pb-font-semibold pb-text-white pb-bg-orange-500 hover:pb-bg-brown-200':
@@ -26,10 +34,5 @@ function Button({ children, type, icon: Icon, size, className }: ButtonProps) {
     </button>
   );
 }
-
-Button.defaultProps = {
-  type: 'button',
-  size: 'medium',
-};
 
 export default Button;

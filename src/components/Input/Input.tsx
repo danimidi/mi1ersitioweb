@@ -1,5 +1,6 @@
 import React, { SVGProps } from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid';
+import { text } from 'stream/consumers';
 
 type InputProps = {
   placeholder?: string;
@@ -7,7 +8,7 @@ type InputProps = {
   icon?: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 };
 
-function Input({ placeholder, type, icon: Icon }: InputProps) {
+function Input({ placeholder, type = 'text', icon: Icon }: InputProps) {
   return (
     <div className='pb-h-[54px] pb-px-2.5 pb-rounded-[10px] pb-border pb-border-neutral-50 pb-bg-white focus-within:pb-border-orange-500'>
       <input
@@ -19,9 +20,5 @@ function Input({ placeholder, type, icon: Icon }: InputProps) {
     </div>
   );
 }
-
-Input.defaultProps = {
-  type: 'text',
-};
 
 export default Input;
