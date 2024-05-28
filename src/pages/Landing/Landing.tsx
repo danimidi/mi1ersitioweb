@@ -4,6 +4,7 @@ import petbookyLogo from '../../assets/img/petbooky_logo.svg';
 import './landing.css';
 import petsKawaii from '../../assets/img/pets-kawaii.svg';
 import landingBg from '../../assets/img/luna1.jpg';
+import Button from '../../components/Button';
 
 type LandingProps = {
   subtitle: string;
@@ -60,9 +61,14 @@ const Landing = ({
               {description}
             </h2>
           </div>
-          <button className='pb-w-4/5 pb-p-4 pb-mt-5 pb-rounded-xl pb-text-2xl pb-font-semibold pb-text-white pb-bg-orange-500 hover:pb-bg-brown-200 sm:pb-max-w-72 md:pb-mt-7'>
+
+          <Button
+            size='large'
+            className='pb-w-4/5 pb-mt-5 sm:pb-max-w-72 md:pb-mt-7'
+          >
             {btnLabel}
-          </button>
+          </Button>
+
           <span className='pb-text-sm pb-font-medium pb-mt-2.5 pb-text-neutral-500'>
             {loginParts.section1}
             <span className='pb-underline pb-text-orange-500'>

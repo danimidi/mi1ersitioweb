@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Landing from './pages/Landing';
-import Login from './pages/Login/Login';
+import Login from './pages/Login';
 //not index name for tailwind config
 import './main.css';
 

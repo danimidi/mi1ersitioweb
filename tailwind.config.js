@@ -22,6 +22,8 @@ module.exports = {
       'neutral-500': '#2E2E2E',
       'neutral-200': '#54616b',
       'neutral-100': '#757575',
+      'neutral-70': '#a6a7a9',
+      'neutral-50': '#dddfe2',
 
       // landing background
       'beige-50': '#fff5ea',
