@@ -7,13 +7,6 @@ const HomeContainer = () => {
     return messages.es.LOGIN;
   }, []);
 
-  return (
-    <Home
-      title={loginMsgs.TITLE}
-      forgotPassword={loginMsgs.FORGOT_PASSWORD}
-      btnLabel={loginMsgs.BTN_LABEL}
-      noAccount={loginMsgs.NO_ACCOUNT_SIGN_UP}
-    />
-  );
+  return <Home title={loginMsgs.TITLE} />;
 };
 export default HomeContainer;

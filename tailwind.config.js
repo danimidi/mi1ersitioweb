@@ -6,6 +6,7 @@ module.exports = {
   prefix: 'pb-',
   theme: {
     colors: {
+      transparent: 'transparent',
       white: '#FFFFFF',
       //browns
       'brown-500': '#6B321B',
@@ -24,6 +25,7 @@ module.exports = {
       'neutral-100': '#757575',
       'neutral-70': '#a6a7a9',
       'neutral-50': '#dddfe2',
+      'neutral-30': '#F2F2F3',
 
       // landing background
       'beige-50': '#fff5ea',

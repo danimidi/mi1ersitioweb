@@ -1,0 +1,19 @@
+.pb-nav-item--active{
+    @apply pb-text-brown-500 
+}
+
+.pb-nav-item__outline, .pb-nav-item__solid{
+    @apply pb-h-7 pb-w-auto pb-text-brown-500
+}
+
+.pb-nav-item--active .pb-nav-item__outline{
+    @apply pb-hidden
+}
+
+.pb-nav-item--active .pb-nav-item__outline{
+    @apply pb-hidden
+}
+
+.pb-nav-item--default .pb-nav-item__solid{
+    @apply pb-hidden
+}
