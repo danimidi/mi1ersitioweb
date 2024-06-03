@@ -1,0 +1,16 @@
+.pb-heart-shape{
+    animation: heartSize 0.5s ease-out;
+    width: 100px;
+    height: 100px;
+  }
+  
+  @keyframes heartSize {
+    0% {
+      scale: 0.2;
+      opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    } 
+  } 

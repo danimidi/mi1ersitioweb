@@ -1,9 +1,10 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import './home.css';
 import {
   BookmarkIcon,
   ChatBubbleOvalLeftIcon,
 } from '@heroicons/react/24/outline';
+import { HeartIcon } from '@heroicons/react/24/solid';
 import Layout from '../../components/Layout';
 import dog1 from '../../assets/img/posts/dog-1.png';
 import dog2 from '../../assets/img/posts/dog-2.png';
@@ -57,8 +58,12 @@ function Home({ title }: HomeProps) {
   ];
 
   const [posts, setPosts] = useState(initialPosts);
+  const [heartTransition, setHeartTransition] = useState(false);
+  const [currentPostIndex, setCurrentPostIndex] = useState(0);
 
   const handleLike = (index: number) => {
+    setCurrentPostIndex(index);
+    setHeartTransition(true);
     const newValue = posts.map((item, i) => {
       if (index === i) {
         return {
@@ -70,6 +75,10 @@ function Home({ title }: HomeProps) {
     });
 
     setPosts(newValue);
+
+    setTimeout(() => {
+      setHeartTransition(false);
+    }, 600);
   };
   return (
     <Layout>
@@ -89,11 +98,17 @@ function Home({ title }: HomeProps) {
                 {post.userName}
               </span>
             </div>
-            <img
-              src={post.media}
-              alt={post.userName}
-              className='pb-w-[495px]'
-            />
+            <div className='pb-relative'>
+              <img
+                src={post.media}
+                alt={post.userName}
+                className='pb-w-[495px]'
+                onDoubleClick={() => handleLike(index)}
+              />
+              {heartTransition && currentPostIndex === index && (
+                <HeartIcon className='pb-heart-shape pb-absolute pb-top-4 pb-right-4 pb-text-orange-500' />
+              )}
+            </div>
             <div className='pb-px-3'>
               <div className='pb-flex pb-justify-between pb-py-2'>
                 <button onClick={() => handleLike(index)}>
