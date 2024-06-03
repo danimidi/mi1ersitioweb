@@ -79,7 +79,7 @@ const Landing = ({
       </main>
       <footer></footer>
       <div
-        className='pb-absolute pb-top-0 pb-left-0 -pb-z-10 pb-w-full pb-h-full pb-bg-landing pb-bg-cover pb-opacity-25 landing-bg--position sm:pb-bg-center'
+        className='pb-absolute pb-top-0 pb-left-0 -pb-z-10 pb-w-full pb-h-full pb-bg-cover pb-opacity-25 landing-bg--position sm:pb-bg-center'
         style={{ backgroundImage: `url(${landingBg})` }}
       ></div>
     </div>

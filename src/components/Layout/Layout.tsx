@@ -50,6 +50,7 @@ function Layout({ children }: LayoutProps) {
                   : 'pb-nav-item--default';
                 return `${defaultClass} ${active}`;
               }}
+              key={path}
             >
               <Icon className='pb-nav-item__outline' />
               <SolidIcon className='pb-nav-item__solid' />
