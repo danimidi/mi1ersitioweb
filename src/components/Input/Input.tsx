@@ -1,6 +1,4 @@
 import React, { SVGProps } from 'react';
-import { EyeIcon } from '@heroicons/react/24/solid';
-import { text } from 'stream/consumers';
 
 type InputProps = {
   placeholder?: string;
