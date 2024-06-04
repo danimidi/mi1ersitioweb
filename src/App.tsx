@@ -9,9 +9,9 @@ import './main.css';
 
 function App() {
   return (
-    <Router basename='/mi1ersitioweb'>
+    <Router basename='/'>
       <Routes>
-        <Route path='/mi1ersitioweb' element={<Landing />} />
+        <Route path='/' element={<Landing />} />
         <Route path='/login' element={<Login />} />
         <Route path='/feed' element={<Home />} />
       </Routes>
