@@ -12,8 +12,8 @@ function App() {
     <Router basename='/mi1ersitioweb'>
       <Routes>
         <Route path='/mi1ersitioweb' element={<Landing />} />
-        <Route path='/mi1ersitioweb/login' element={<Login />} />
-        <Route path='/mi1ersitioweb/feed' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/feed' element={<Home />} />
       </Routes>
     </Router>
   );
