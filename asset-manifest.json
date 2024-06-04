@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.713e2045.css",
+    "main.js": "/static/js/main.93716747.js",
+    "static/js/453.efc0d6f6.chunk.js": "/static/js/453.efc0d6f6.chunk.js",
+    "static/media/dog-3.jpg": "/static/media/dog-3.48b66dfe1b74c65f2f56.jpg",
+    "static/media/pets-kawaii.svg": "/static/media/pets-kawaii.93c076e8d64a1b87ab75dfcda5ac79d0.svg",
+    "static/media/cat3.svg": "/static/media/cat3.b65549633d18bdda87c4c82c991db7db.svg",
+    "static/media/cat-2.png": "/static/media/cat-2.061c7b667f05523692df.png",
+    "static/media/dog-1.png": "/static/media/dog-1.a95906ed478bedd4905d.png",
+    "static/media/dog-2.png": "/static/media/dog-2.531add8100510b1980d1.png",
+    "static/media/luna1.jpg": "/static/media/luna1.855d378637c2adf73d12.jpg",
+    "static/media/cat-1.png": "/static/media/cat-1.92146a9d8f4a69d20a61.png",
+    "static/media/profile-pet.jpeg": "/static/media/profile-pet.f1507bb155acb8156c69.jpeg",
+    "static/media/petbooky_logo.svg": "/static/media/petbooky_logo.598ae7863249a3ca2feac8e028c96b37.svg",
+    "index.html": "/index.html",
+    "main.713e2045.css.map": "/static/css/main.713e2045.css.map",
+    "main.93716747.js.map": "/static/js/main.93716747.js.map",
+    "453.efc0d6f6.chunk.js.map": "/static/js/453.efc0d6f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.713e2045.css",
+    "static/js/main.93716747.js"
+  ]
+}
