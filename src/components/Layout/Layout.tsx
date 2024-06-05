@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import petbookyLogo from '../../assets/img/petbooky_logo.svg';
 import profilePet from '../../assets/img/profile-pet.jpeg';
 import {
@@ -30,7 +30,9 @@ function Layout({ children }: LayoutProps) {
     <div className='pb-flex pb-flex-col pb-min-h-full pb-h-full pb-mx-auto'>
       <header className='pb-flex pb-justify-between pb-border-b pb-border-solid pb-px-6 pb-py-4 pb-border-b-neutral-50'>
         <div className='pb-flex pb-items-center pb-gap-4'>
-          <img src={petbookyLogo} alt='logo' className='pb-h-8 pb-w-auto' />
+          <a href='/'>
+            <img src={petbookyLogo} alt='logo' className='pb-h-8 pb-w-auto' />
+          </a>
           <button className='pb-h-fit'>
             <MoonIcon className='pb-h-7 pb-w-auto pb-text-brown-500' />
           </button>

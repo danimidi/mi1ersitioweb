@@ -4,11 +4,10 @@ import messages from '../../i18n/index';
 import { useMemo } from 'react';
 
 const LandingContainer = () => {
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const onClickStartOrContinueApplication = () => {
-    // navigate(`/application/${123}`);
-    console.log('hola');
+    navigate(`/login`);
   };
 
   const landingMsgs = useMemo(() => {

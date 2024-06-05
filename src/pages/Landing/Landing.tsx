@@ -37,7 +37,7 @@ const Landing = ({
       <header className='pb-p-3'>
         <nav className='pb-flex pb-justify-end pb-text-sm'>
           <button className='pb-px-3 pb-py-1 pb-font-medium pb-text-neutral-500 hover:pb-bg-orange-100 hover:pb-text-orange-500'>
-            Login
+            <a href='/login'>Login</a>
           </button>
           <button className='pb-flex pb-gap-1 pb-items-center pb-px-2 pb-py-1 pb-font-medium pb-text-neutral-500 hover:pb-bg-orange-100 hover:pb-text-orange-500'>
             <GlobeAltIcon className='pb-h-4 pb-w-4' />
@@ -65,6 +65,7 @@ const Landing = ({
           <Button
             size='large'
             className='pb-w-4/5 pb-mt-5 sm:pb-max-w-72 md:pb-mt-7'
+            onClick={onJoinMe}
           >
             {btnLabel}
           </Button>

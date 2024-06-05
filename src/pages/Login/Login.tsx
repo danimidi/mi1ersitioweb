@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import petbookyLogo from '../../assets/img/petbooky_logo.svg';
 import cat from '../../assets/img/cat3.svg';
 import Input from '../../components/Input';
@@ -19,6 +19,9 @@ function Login({
   noAccount,
   authenticateUser,
 }: LoginProps) {
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const [disabledBtn, setDisabledBtn] = useState(false);
   const noAccountParts = useMemo(() => {
     const sections = noAccount.split('+');
 
@@ -28,19 +31,42 @@ function Login({
     };
   }, [noAccount]);
 
+  useEffect(() => {
+    setDisabledBtn(!userName || !password);
+  }, [userName, password]);
+
+  const changeUserName = (val: string) => {
+    setUserName(val);
+  };
+
+  const changePassword = (val: string) => {
+    setPassword(val);
+  };
+
   return (
     <div className='pb-flex pb-flex-col pb-min-h-full pb-h-full pb-max-w-[1380px] pb-mx-auto pb-px-6 pb-py-4'>
       <header>
-        <img src={petbookyLogo} alt='logo' className='pb-h-8 pb-w-auto' />
+        <a href='/'>
+          <img src={petbookyLogo} alt='logo' className='pb-h-8 pb-w-auto' />
+        </a>
       </header>
       <main className='pb-flex pb-relative pb-flex-col pb-h-full pb-items-center'>
         <h1 className='pb-text-2xl pb-font-bold pb-text-neutral-500 pb-mt-24'>
           {title}
         </h1>
         <form className='pb-w-full pb-space-y-8 pb-mt-14 sm:pb-max-w-[592px]'>
-          <Input placeholder={'Correo electrónico'} />
+          <Input
+            value={userName}
+            placeholder={'Correo electrónico o usuario'}
+            onChange={changeUserName}
+          />
           <div>
-            <Input placeholder={'Contraseña'} type='password' />
+            <Input
+              value={password}
+              placeholder={'Contraseña'}
+              type='password'
+              onChange={changePassword}
+            />
             <span className='pb-flex pb-justify-end pb-text-xs pb-mt-4 pb-text-neutral-100'>
               <a href='/password/reset/'>{forgotPassword}</a>
             </span>
@@ -49,6 +75,7 @@ function Login({
             type='submit'
             size='medium'
             className='pb-w-full'
+            disabled={disabledBtn}
             onClick={authenticateUser}
           >
             {btnLabel}

@@ -8,6 +8,7 @@ type ButtonProps = {
   onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
   size?: 'small' | 'medium' | 'large';
   className?: string;
+  disabled?: boolean;
 };
 
 function Button({
@@ -17,13 +18,15 @@ function Button({
   size = 'medium',
   className,
   onClick,
+  disabled,
 }: ButtonProps) {
   return (
     <button
       onClick={onClick}
       type={type}
+      disabled={disabled}
       className={cn(className, {
-        'pb-font-semibold pb-text-white pb-bg-orange-500 hover:pb-bg-brown-200':
+        'pb-font-semibold pb-text-white pb-bg-orange-500 hover:pb-bg-brown-200 disabled:pb-bg-orange-200':
           true,
         'pb-text-sm pb-p-3 pb-rounded-[10px]': size === 'medium',
         'pb-text-base pb-p-4 pb-rounded-[10px]': size === 'medium',
