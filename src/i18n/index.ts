@@ -18,7 +18,7 @@ const messages = {
     LANDING: {
       TITLE: 'UNIVERSO DE MASCOTAS',
       DESCRIPTION:
-        '¡Se parte de esta gran comunidad y descubré toda la magia en ella!',
+        '¡Sé parte de esta gran comunidad y descubre toda la magia en ella!',
       BUTTON_LABEL: 'UNIRME',
       GO_LOGIN_TEXT: '¿Tienes cuenta? +entra aquí!+',
     },
